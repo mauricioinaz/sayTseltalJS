@@ -13,10 +13,10 @@ describe('Tseltal Number', () => {
         expect(() => sayTseltal(-1))
           .toThrow(new Error("Numero fuera de rango / Yahtabal c'ax muc'"));
       });
-
   })
 
   describe('Initial Numbers', () => {
+
     test('Zero', () => {
       expect(sayTseltal(0)).toEqual("Ma'yuc");
     });
@@ -54,8 +54,8 @@ describe('Tseltal Number', () => {
     });
   })
 
-
   describe("jbahc'", () => {
+
     test('400', () => {
       expect(sayTseltal(400)).toEqual("jbahc'");
     });
@@ -90,6 +90,7 @@ describe('Tseltal Number', () => {
   })
 
   describe("jpic", () => {
+
     test('8000', () => {
       expect(sayTseltal(8000)).toEqual("jpic");
     });
@@ -132,6 +133,7 @@ describe('Tseltal Number', () => {
   })
 
   describe("jbahc' bahqu'etic", () => {
+
     test('160000', () => {
       expect(sayTseltal(160000)).toEqual("jbahc' bahqu'etic");
     });
@@ -142,6 +144,7 @@ describe('Tseltal Number', () => {
   })
 
   describe("jmam", () => {
+    
     test('3200000', () => {
       expect(sayTseltal(3200000)).toEqual("jmam");
     });

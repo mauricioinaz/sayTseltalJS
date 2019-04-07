@@ -1,16 +1,3 @@
-// const TS_NUMB = {
-//   1: {
-//     "number": "jun",
-//     "pronoun": "j",
-//     "multiplier": "j"
-//   },
-//   2: {
-//     "number": "cheb",
-//     "pronoun": "s",
-//     "multiplier": "cha"
-//   }
-// }
-
 const NUMBERS_ONE_TWENTY = {
   1: "jun",
   2: "cheb",
@@ -98,7 +85,7 @@ export const sayTseltal = (n) => {
     tmpNumber -= baseTwenty[baseTwenty.length - 1]
     tmpNumber /= 20
   }
-  console.log(baseTwenty);
+  //console.log(baseTwenty);
 
   let result = ""
   let pos = 0
@@ -117,37 +104,10 @@ export const sayTseltal = (n) => {
     // 19 Special case
     if (baseTwenty[pos] === 19) {result += " s" + ORDERS[pos+1] + "al"}
     else if (baseTwenty[pos] !== 0) {
-      result += " " + PRONOUNS[baseTwenty[pos]+1] + MULTIPLIERS[baseTwenty[pos]+1] + ORDERS[pos]  
+      result += " " + PRONOUNS[baseTwenty[pos]+1] + MULTIPLIERS[baseTwenty[pos]+1] + ORDERS[pos]
     }
     pos++
   }
 
   return result
 }
-
-//apuntador = 0
-
-// if 0 on 0
-// while?  0 brincar hasta número ...
-// if 0,1  ---> SPECIAL  jtahb
-// else ---> mult + order
-
-// else apuntador 0 --> NUMBERS_1_20
-
-// while apuntador < .length
-// if 19 --> pron + NEXTorder + AL
-// else  --> pron + mult + order
-
-
-  //1-19
-
-  //20 exception
-
-  // 40, 60... mult + order
-
-  //21-39 = numb + pron + mult + Order
-
-  // (381), "jun sbahc'al" ...  number + pron + NEXTorder + AL
-  //CONSIDER no NEXT number.
-
-  // (421), "jun scha'winic scha'bahc'" = numb +++ pron + mult + order +++ pron + mult + order
