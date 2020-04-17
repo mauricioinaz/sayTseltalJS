@@ -1,20 +1,21 @@
 {
-  "name": "sayTseltal",
-  "version": "1.0.1",
-  "description": "Given a number, spell out that number in Tzeltal-Mayan language.",
-  "main": "sayTseltal.js",
-  "repository": "https://github.com/mauricioinaz/sayTseltalJS.git",
-  "author": "mauricioinaz <mauricio.glez@gmail.com>",
-  "license": "MIT",
+  "name": "@mauricioinaz/say-tseltal",
+  "version": "1.0.2",
+  "description": "Convert integers into Mayan-Tseltal language",
+  "author": "Mauricio Gonzalez",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mauricioinaz/say-tseltal/"
+  },
   "devDependencies": {
-    "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.3.0",
-    "eslint-config-airbnb-base": "^14.0.0",
-    "eslint-plugin-import": "^2.18.2",
-    "jest": "^24.9.0"
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-plugin-transform-builtin-extend": "^1.1.2",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.15.0",
+    "jest": "^23.6.0"
   },
   "jest": {
     "modulePathIgnorePatterns": [
@@ -24,7 +25,7 @@
   "babel": {
     "presets": [
       [
-        "@babel/env",
+        "env",
         {
           "targets": [
             {
@@ -32,6 +33,19 @@
             }
           ]
         }
+      ]
+    ],
+    "plugins": [
+      [
+        "babel-plugin-transform-builtin-extend",
+        {
+          "globals": [
+            "Error"
+          ]
+        }
+      ],
+      [
+        "transform-regenerator"
       ]
     ]
   },
@@ -58,5 +72,14 @@
       "import/prefer-default-export": "off",
       "import/no-default-export": "off"
     }
-  }
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "keywords": [
+    "tseltal",
+    "tzeltal",
+    "say",
+    "numbers_to_text",
+    "mauricioinaz"
+  ]
 }
