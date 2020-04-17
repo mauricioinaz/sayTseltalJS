@@ -112,3 +112,5 @@ export const sayTseltal = (n) => {
 
   return result
 }
+
+export default sayTseltal
