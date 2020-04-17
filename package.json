@@ -7,53 +7,20 @@
     "type": "git",
     "url": "https://github.com/mauricioinaz/say-tseltal/"
   },
+    "dependencies": {
+  },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "babel-jest": "^23.6.0",
-    "babel-plugin-transform-builtin-extend": "^1.1.2",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^5.12.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.15.0",
-    "jest": "^23.6.0"
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "jest": "^25.1.0"
   },
   "jest": {
-    "modulePathIgnorePatterns": [
-      "package.json"
-    ]
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": [
-            {
-              "node": "current"
-            }
-          ]
-        }
-      ]
-    ],
-    "plugins": [
-      [
-        "babel-plugin-transform-builtin-extend",
-        {
-          "globals": [
-            "Error"
-          ]
-        }
-      ],
-      [
-        "transform-regenerator"
-      ]
-    ]
+    "testEnvironment": "node"
   },
   "scripts": {
     "test": "jest --no-cache ./*",
-    "watch": "jest --no-cache --watch ./*",
-    "lint": "eslint .",
-    "lint-test": "eslint . && jest --no-cache ./* "
+    "watch": "jest --no-cache --watch ./*"
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -74,7 +41,6 @@
     }
   },
   "license": "MIT",
-  "dependencies": {},
   "keywords": [
     "tseltal",
     "tzeltal",
