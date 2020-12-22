@@ -1,5 +1,5 @@
 # sayTseltalJS
-Tool for spelling out a number in Tseltal
+Tool for spelling out a number in [Tseltal](https://en.wikipedia.org/wiki/Tzeltal_language)
 
 ## Install
 ```
